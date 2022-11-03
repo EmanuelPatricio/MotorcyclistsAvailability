@@ -1,0 +1,33 @@
+﻿<td style="background-color: @_bgColor; text-align: center;" @onclick="OnMotorcyclistAssignment">@Time</td>
+
+@code {
+  [Parameter]
+  public string? Time { get; set; }
+
+  [Parameter]
+  public int MotorcyclistsAvailable { get; set; }
+
+  [Parameter]
+  public EventCallback<int> MotorcyclistsAvailableChanged { get; set; }
+
+  private bool _isSelected = false;
+  private string _bgColor = "white";
+
+  private async Task OnMotorcyclistAssignment()
+  {
+    if (_isSelected)
+    {
+      _bgColor = "white";
+      MotorcyclistsAvailable++;
+      _isSelected = false;
+    }
+    else
+    {
+      _bgColor = "red";
+      MotorcyclistsAvailable--;
+      _isSelected = true;
+    }
+
+    await MotorcyclistsAvailableChanged.InvokeAsync(MotorcyclistsAvailable);
+  }
+}

@@ -1,0 +1,49 @@
+﻿@page "/motor"
+
+<h3>Motorclyclists availables: @_motorcyclistsCount</h3>
+
+<br />
+<br />
+<br />
+
+<table class="table table-bordered" onselectstart="return false" ondragstart="return false">
+  <tr>
+    <ScheduleItem Time="08:00 am" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="08:30 am" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="09:00 am" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="09:30 am" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="10:00 am" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+  </tr>
+  <tr>
+    <ScheduleItem Time="10:30 am" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="11:00 am" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="11:30 am" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="12:00 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="12:30 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+  </tr>
+  <tr>
+    <ScheduleItem Time="01:00 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="01:30 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="02:00 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="02:30 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="03:00 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+  </tr>
+  <tr>
+    <ScheduleItem Time="03:30 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="04:00 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="04:30 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="05:00 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="05:30 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+  </tr>
+  <tr>
+    <ScheduleItem Time="06:00 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="06:30 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="07:00 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="07:30 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+    <ScheduleItem Time="08:00 pm" @bind-MotorcyclistsAvailable="_motorcyclistsCount" />
+  </tr>
+</table>
+
+@code {
+  private int _motorcyclistsCount = 8;
+}
